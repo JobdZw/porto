@@ -1,59 +1,274 @@
 *{
-    padding: 0;
     margin: 0;
-    font: Noto Sans medium;
+    padding: 0;
+    font-family:'Ubuntu', sans-serif;
 }
-
-header{
-    width: 100vw;
-    height: 100px;
-    background-color: rgba(83, 162, 190, 1);
+a{
+  text-decoration: none;
+  color: aquamarine;
+  padding: 4vw;
+  font-size: 20px;
 }
-nav{
+body{
+  background-color: rgba(10, 19, 37, 1);
+}
+#nomove{
+  padding: 0%;
+}
+#mid-titel{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.gloweffect {
+  width: 200px;
+  height: 100px;
+  background-color: #fff; /* Achtergronkleur van het element */
+  border-radius: 10px; /* Afgeronde hoeken, optioneel */
 
-}
-.angry-grid {
-    display: grid; 
- 
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-    grid-template-areas: 
-     'label0 laber1 label2 label3 label4';
-    
-    gap: 0px;
-    height: 200px;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
- }
- #item-0nav{
-    grid-area: label0;
-    
- }
- #item-1nav{
-    grid-area: label1;
- }
-#item-3nav{
-    grid-area: label2;
-}
-#item-4nav{
-    grid-area: label3;
-}
-#item-5nav{
-    grid-area: label4;
+  /* Boxshadow voor het gloweffect */
+  box-shadow: 0 0 10px rgba(82, 231, 190, 1);
 }
 
-main{
-    width: 100vw;
-    height: 1000px;
-    background-color: rgba(241, 251, 255, 1);
+/* Animatie voor het gloweffect (geen idee waarom het niet werkt*/
+@keyframes glowanimation {
+  0% {
+      box-shadow: 0 0 10px rgba(82, 231, 190, 1);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(82, 231, 190, 0.8);
+  }
+  100% {
+      box-shadow: 0 0 10px rgba(82, 231, 190, 1);
+  }
 }
-footer{
-    width: 100vw;
-    height: 100px;
-    background-color: rgba(83, 162, 190, 1);
+
+.gloweffect:hover {
+  animation: glowAnimation 1s infinite; /*hover */
 }
-@media screen and (max-width=500px){
-    
+
+
+img{
+  border-radius: 7%
+}
+
+
+#titel{
+        background: linear-gradient(to right, rgba(82, 231, 190, 1),rgb(0, 157, 255),rgb(0, 4, 255));
+        background-size: 150% 150%;
+        animation: rainbow 4s ease-in-out infinite;
+        background-clip: text;
+        -webkit-background-clip:text;
+        color:rgb(219, 17, 17);
+        margin:15vh auto;
+        display:block;
+        text-align:center;
+        transition: color .8s ease-in-out;
+        text-transform:uppercase;
+        font-weight:700;
+        font-size: 42pt;
+        color: white;
+      }
+    #titel:hover{
+        color:rgba(0, 0, 0, 0);
+      }
+     @keyframes rainbow { 
+        0%{background-position:left}
+        25%{background-position: right;}
+        50%{background-position:left}
+        75%{background-position: right;}
+        100%{background-position:left}
+      }
+      .arrows{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+      }
+      
+     .arrow {
+        border: solid rgba(82, 231, 190, 1);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 15px;
+        font-weight: bold;
+      }
+     .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+ .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+      }
+
+#barup{
+  background-color:rgba(10, 19, 37, 1);  ;
+  width: 100vw;
+  height: 8vw;
+}
+#sections{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100vw;
+  height: 8vw;
+}
+#leftbar{
+background-color: rgba(10, 19, 37, 1);
+width: 8vw;
+height: 100%;
+position:fixed;
+top:0px;
+}
+
+#name{
+  display: flex;
+  align-content: center;
+  font-weight: 100;
+}
+#name{
+  color: rgba(82, 231, 190, 1);
+}
+#symbools{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  bottom: 90vh;
+  height: 85%;
+  padding: 4%;
+  margin: 0;
+}
+
+.symbolcontainer {
+  margin-bottom: 20px;
+}
+
+
+#Aboutme{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+  height: 700px;
+}
+.meblock{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 7vw;
+}
+#mejob{
+  border-radius:4%;}
+#tekstme{
+  display: flex;
+  justify-content: end;
+  margin-top: 25px;
+  height: 100%;
+  width: 100%;
+  margin-left: 15vw;
+  font-size: 20pt;
+  color: rgba(193, 203, 244, 1)
+}
+ #Mywork{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1400px;
+  width: 100vw;
+ }
+.woblock{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 16vw;
+  flex-direction: column;
+}
+ .workblock{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 4%;
+  width: 50%;
+  height: 50%;
+  border-radius: 6%;
+  margin-top: 10vw;
+  margin-left: 14vw;
+  background-color: rgba(116, 127, 160, 1);
+  font-size: 16pt;
+  color: rgba(193, 203, 244, 1)
+ }
+ #Programs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1600px;
+  width: 100vw;
+ }
+ .problock{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 6vw;
+  flex-direction: column;
+ }
+ .progamblock{
+  display: flex;
+  justify-content: center;
+  padding: 4%;
+  width: 46%;
+  height: 100%;
+  border-radius: 6%;
+  margin-top: 15vw;
+  margin-left: 16vw;
+  background-color: rgba(116, 127, 160, 1);
+  font-size: 16pt;
+  color: rgba(193, 203, 244, 1)
+ }
+
+#Contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 1400px;
+  width: 100vw;
+}
+.coblock{
+  display: flex;
+  align-items: center;
+  width: 45vw;
+  height: 7%;
+  border-radius: 4%;
+  padding: 7vw;
+  font-size: 16pt;
+  color: rgba(193, 203, 244, 1);
+  background-color: rgba(116, 127, 160, 1);
+}
+#textblock{
+  display: flex;
+  margin-top: 7vw;
+  flex-direction: row;
+  color: rgba(82, 231, 190, 1);
+}
+#name2{
+  width: 46vw;
+  
+}
+#mail{
+  width: 46vw;
+}
+#text{
+  width: 46vw;
+  height: 300px;
 }
